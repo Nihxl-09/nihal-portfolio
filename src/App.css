@@ -1326,6 +1326,43 @@
   .contact-wrap {
     padding: 24px 18px;
   }
+
+  .education-card {
+    position: relative;
+    overflow: hidden;
+    padding: 24px 20px;
+  }
+
+  .education-meta,
+  .education-interests {
+    position: relative;
+    z-index: 5;
+    max-width: 100%;
+  }
+
+  .education-institution,
+  .education-program,
+  .education-interests p,
+  .education-interests li {
+    position: relative;
+    z-index: 6;
+  }
+
+  .education-institution {
+    display: block;
+    max-width: calc(100% - 18px);
+  }
+
+  .education-program {
+    display: block;
+    max-width: 100%;
+  }
+
+  .education-card::before,
+  .education-card::after {
+    pointer-events: none;
+    z-index: 0;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
