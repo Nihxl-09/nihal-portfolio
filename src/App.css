@@ -1327,6 +1327,7 @@
     padding: 24px 18px;
   }
 
+  /* Mobile education cleanup */
   .education-card {
     position: relative;
     overflow: hidden;
@@ -1336,21 +1337,30 @@
   .education-meta,
   .education-interests {
     position: relative;
-    z-index: 5;
+    z-index: 2;
+    width: 100%;
     max-width: 100%;
   }
 
   .education-institution,
   .education-program,
   .education-interests p,
+  .education-interests ul,
   .education-interests li {
     position: relative;
-    z-index: 6;
+    z-index: 3;
   }
 
+  /* Hide the desktop timeline decoration on small screens */
+  .education-card::before,
+  .education-card::after {
+    display: none;
+  }
+
+  /* Give the mobile content a clean edge */
   .education-institution {
     display: block;
-    max-width: calc(100% - 18px);
+    max-width: 100%;
   }
 
   .education-program {
@@ -1358,10 +1368,8 @@
     max-width: 100%;
   }
 
-  .education-card::before,
-  .education-card::after {
-    pointer-events: none;
-    z-index: 0;
+  .education-interests ul {
+    width: 100%;
   }
 }
 
